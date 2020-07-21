@@ -4,7 +4,7 @@ from auto_complete_data import AutoCompleteData
 
 
 def score(word, sentence):
-    return len(word)
+    return len(word)*2
 
 
 def clean_string(string_):
@@ -12,12 +12,11 @@ def clean_string(string_):
 
 
 def get_key(sentence):
-    for word in words:
-        word_ = clean_string(word)
+        word_ = clean_string(sentence)
         if word_ != '':
             return word_
+        return None
 
-    return None
 
 
 def remove_lowest_score(list_):
