@@ -16,9 +16,7 @@ class AutoCompleteData:
         self.score -= points_to_decrement
 
     @staticmethod
-    def get_score(word):
+    def get_score(word,sentence):
         return len(word) * 2
-
-
 
 
